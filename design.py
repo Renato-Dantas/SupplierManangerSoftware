@@ -319,7 +319,8 @@ class Ui_MainWindow(object):
         self.verticalLayout_5.setObjectName("verticalLayout_5")
         self.label = QtWidgets.QLabel(self.frame)
         self.label.setStyleSheet("color: #fff;\n"
-"border: 0px;")
+"border: 0px;\n"
+"font: 16pt \"Tw Cen MT\";")
         self.label.setObjectName("label")
         self.verticalLayout_5.addWidget(self.label)
         self.gridLayout.addWidget(self.frame, 0, 0, 1, 1)
@@ -350,15 +351,48 @@ class Ui_MainWindow(object):
         self.btSearch.setObjectName("btSearch")
         self.horizontalLayout_3.addWidget(self.btSearch)
         self.gridLayout.addWidget(self.frame_3, 1, 0, 1, 2)
-        self.btSearchName = QtWidgets.QPushButton(self.pageSearch)
-        self.btSearchName.setMaximumSize(QtCore.QSize(100, 70))
-        self.btSearchName.setStyleSheet("QPushButton{color: #fff;\n"
-"font: 10pt \"Tw Cen MT\";\n"
-"background-color: rgb(0, 0, 0); border-radius: 10px;}\n"
-"\n"
-"QPushButton:hover{color: black; background: gold; border: 1px solid rgb(31, 0, 94);}")
-        self.btSearchName.setObjectName("btSearchName")
-        self.gridLayout.addWidget(self.btSearchName, 0, 1, 1, 1)
+        self.frame_2 = QtWidgets.QFrame(self.pageSearch)
+        self.frame_2.setMaximumSize(QtCore.QSize(100, 50))
+        self.frame_2.setStyleSheet("background-color: #52517b;\n"
+"border-radius: 5px;\n"
+"border: 1px solid;\n"
+"border-color: black;")
+        self.frame_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_2.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_2.setObjectName("frame_2")
+        self.gridLayout_4 = QtWidgets.QGridLayout(self.frame_2)
+        self.gridLayout_4.setContentsMargins(0, 0, 0, 0)
+        self.gridLayout_4.setSpacing(0)
+        self.gridLayout_4.setObjectName("gridLayout_4")
+        self.groupBox = QtWidgets.QGroupBox(self.frame_2)
+        self.groupBox.setMinimumSize(QtCore.QSize(100, 0))
+        self.groupBox.setMaximumSize(QtCore.QSize(16777215, 16777215))
+        self.groupBox.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.groupBox.setStyleSheet("border: 0px;")
+        self.groupBox.setTitle("")
+        self.groupBox.setObjectName("groupBox")
+        self.verticalLayout_4 = QtWidgets.QVBoxLayout(self.groupBox)
+        self.verticalLayout_4.setObjectName("verticalLayout_4")
+        self.rb_nameSearch = QtWidgets.QRadioButton(self.groupBox)
+        self.rb_nameSearch.setContextMenuPolicy(QtCore.Qt.PreventContextMenu)
+        self.rb_nameSearch.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.rb_nameSearch.setStyleSheet("font: 8pt \"Tw Cen MT\";\n"
+"color: #fff;\n"
+"border: 0px;\n"
+"")
+        self.rb_nameSearch.setObjectName("rb_nameSearch")
+        self.verticalLayout_4.addWidget(self.rb_nameSearch)
+        self.rb_areaSearch = QtWidgets.QRadioButton(self.groupBox)
+        self.rb_areaSearch.setContextMenuPolicy(QtCore.Qt.PreventContextMenu)
+        self.rb_areaSearch.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.rb_areaSearch.setStyleSheet("font: 8pt \"Tw Cen MT\";\n"
+"color: #fff;\n"
+"border: 0px;\n"
+"")
+        self.rb_areaSearch.setObjectName("rb_areaSearch")
+        self.verticalLayout_4.addWidget(self.rb_areaSearch)
+        self.gridLayout_4.addWidget(self.groupBox, 0, 0, 1, 1)
+        self.gridLayout.addWidget(self.frame_2, 0, 1, 1, 1)
         self.pages.addWidget(self.pageSearch)
         self.pageAdd = QtWidgets.QWidget()
         self.pageAdd.setObjectName("pageAdd")
@@ -762,8 +796,8 @@ class Ui_MainWindow(object):
         item.setText(_translate("MainWindow", "WEBSITE"))
         self.label.setText(_translate("MainWindow", "Search table"))
         self.btSearch.setText(_translate("MainWindow", "SEARCH"))
-        self.btSearchName.setText(_translate("MainWindow", "Change For a \n"
-"name Search"))
+        self.rb_nameSearch.setText(_translate("MainWindow", "Name Search"))
+        self.rb_areaSearch.setText(_translate("MainWindow", "Area Search"))
         self.label_20.setText(_translate("MainWindow", "ID"))
         self.label_3.setText(_translate("MainWindow", "NAME"))
         self.label_4.setText(_translate("MainWindow", "AREA"))

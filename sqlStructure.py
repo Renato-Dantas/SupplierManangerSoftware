@@ -38,6 +38,11 @@ class sqliteFunctions:
         self.cursor.execute(update, data)
         self.connector.commit()
 
+    def deleteData(self, name):
+        self.startDb()
+        delete = 'DELETE from supplier WHERE name = ?'
+        self.cursor.execute(delete, [name])
+        self.connector.commit()
 
     # Retorna uma lista com as áreas possíveis
     def readTxt(self):
